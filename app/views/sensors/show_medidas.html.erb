@@ -1,0 +1,7 @@
+<h1>Medidas pertenecientes a estos Sensores</h1>
+<% @medid=Medida.where(sensor_id: @sensores.id) %>
+<ul>
+<% @medid.each do |m| %>
+<li><%= m.valor %></li>
+<% end %> </ul>
+<%= link_to 'Back', sensors_path %> 

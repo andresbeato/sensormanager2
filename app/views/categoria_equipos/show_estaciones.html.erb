@@ -1,0 +1,7 @@
+<h1>Estaciones pertenecientes a esta categoria</h1>
+<% @concentradors=Concentrador.where(categoria_equipo_id: @categoria_equipo.id) %>
+<ul> <% @concentradors.each do |con| %>
+<li><%= con.nombre %></li>
+<% end %>
+</ul>
+<%= link_to 'Back', categoria_equipos_path %>

@@ -11,6 +11,10 @@ class CategoriaEquiposController < ApplicationController
   # GET /categoria_equipos/1.json
   def show
   end
+  
+  def show_estaciones
+  @categoria_equipo= CategoriaEquipo.find(params[:id])
+  end  
 
   # GET /categoria_equipos/new
   def new

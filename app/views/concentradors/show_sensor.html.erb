@@ -1,0 +1,6 @@
+<h1>Sensores pertenecientes a esta estacion</h1>
+<% @sensors=Sensor.where(concentrador_id: @concentrador.id) %>
+<ul><% @sensors.each do |sen| %>
+<li><%= sen.nombre %></li>
+<% end %></ul>
+<%= link_to 'Back', concentradors_path %>
