@@ -1,0 +1,12 @@
+<h1>Listing comments</h1>
+<div id="comments">
+  <%= render :partial => @comment, :locals => { :list => true } %>
+</div>
+<hr />
+<div id="comment-notice"></div>
+
+<br>
+
+<h2>Say something!</h2>
+<%= link_to 'New Comment', new_comment_path %>  
+
